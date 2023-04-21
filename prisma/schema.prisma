@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -6,4 +5,50 @@ generator client {
 datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
+}
+
+model Product {
+  id          String        @id @default(uuid())
+  name        String
+  description String
+  barcode     String        @unique
+  Transaction Transaction[] @relation("ValueUpdate")
+  Alert       Alert[]       @relation("ExistInAlert")
+}
+
+model User {
+  id          String        @id @default(uuid())
+  name        String
+  sector      String?
+  Task        Task[]        @relation("CreateTask")
+  Transaction Transaction[] @relation("UpdateStock")
+}
+
+model Transaction {
+  id        String   @id @default(uuid())
+  date      DateTime
+  quantity  Int
+  product   Product  @relation("ValueUpdate", fields: [productId], references: [id])
+  productId String
+  user      User     @relation("UpdateStock", fields: [userId], references: [id])
+  userId    String
+}
+
+model Task {
+  id            String   @id @default(uuid())
+  date          DateTime
+  due_date      DateTime
+  complete_date DateTime
+  title         String
+  description   String
+  user          User     @relation("CreateTask", fields: [userId], references: [id])
+  userId        String
+}
+
+model Alert {
+  id        String  @id @default(uuid())
+  title     String
+  quantity  Int
+  product   Product @relation("ExistInAlert", fields: [productId], references: [id])
+  productId String
 }
