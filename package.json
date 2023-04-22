@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@prisma/client": "^4.13.0",
     "prisma": "^4.13.0"
   }
 }
