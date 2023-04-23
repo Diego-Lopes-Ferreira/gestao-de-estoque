@@ -30,6 +30,9 @@ export default function HomePage() {
     }
     callBackend('/api/products', "POST", { name, description, barcode });
   }
+  async function handleDelete() {
+    callBackend('/api/products', "DELETE", { id });
+  }
 
   useEffect(() => {
     if (id == undefined) return;
@@ -46,6 +49,7 @@ export default function HomePage() {
       <label>Código de barras:</label>
       <input value={ barcode } onChange={ (e) => { set_barcode(e.target.value); } } />
       <button type='button' onClick={ handleAction }>{ id == "new" ? "Criar" : "Atualizar" }</button>
+      <button type='button' onClick={ handleDelete } disabled={ id == "new" }>Deletar</button>
     </div>
   );
 }
