@@ -80,7 +80,6 @@ export default function UserPage() {
       </select>
       <button type='button' onClick={ handleAction }>{ id == "new" ? "Adicionar" : "Atualizar" }</button>
       <button type='button' onClick={ handleDelete } disabled={ id == "new" }>Deletar</button>
-      <button type='button' onClick={ () => { console.log(productId); } }>debug :)</button>
     </div>
   );
 }
