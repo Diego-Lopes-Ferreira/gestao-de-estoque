@@ -1,0 +1,79 @@
+:root {
+  --font-normal: 'Roboto', sans-serif;
+  --font-highlight: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-monospace: monospace;
+  --small: 0.25rem;
+  --medium: 0.5rem;
+  --large: 1rem;
+  --color-primary: #8dee0e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--font-normal);
+}
+
+a {
+  color: inherit;
+}
+
+main,
+.screen-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--large);
+  gap: var(--medium);
+  max-width: 50rem;
+}
+
+header {
+  width: 100%;
+  font-family: var(--font-highlight);
+}
+
+header a {
+  font-size: 0.75rem;
+  border: 1px solid black;
+  padding: var(--small) var(--large);
+  font-family: var(--font-monospace);
+}
+
+input,
+label,
+button {
+  display: block;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+input {
+  border-radius: var(--small);
+  padding: var(--small);
+}
+
+button {
+  background-color: var(--color-primary);
+  padding: var(--small) var(--large);
+  text-align: center;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid black;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.bar {
+  border-top: 1px solid black;
+  width: 100%;
+}
