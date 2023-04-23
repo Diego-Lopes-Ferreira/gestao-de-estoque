@@ -64,6 +64,7 @@ export default function EditTransaction() {
       <input value={ quantity } type="number" onChange={ (e) => { set_quantity(e.target.value); } } />
       <label>Produto:</label>
       <select value={ productId } onChange={ (e) => { set_productId(e.target.value); } }>
+        <option value='' disabled>Selecione um produto</option>
         {
           products.map(p => {
             return <option value={ p.id } key={ p.id }>{ p.name }</option>;
@@ -72,6 +73,7 @@ export default function EditTransaction() {
       </select>
       <label>Responsável:</label>
       <select value={ userId } onChange={ (e) => { set_userId(e.target.value); } }>
+        <option value='' disabled>Selecione um responsável</option>
         {
           users.map(u => {
             return <option value={ u.id } key={ u.id }>{ u.name } ({ u.sector })</option>;
