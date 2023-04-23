@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import callBackend from "../../utils/callbackend";
 import Header from "../../components/header";
 
-export default function UserPage() {
+export default function EditUser() {
   const router = useRouter();
   const { id } = router.query;
 

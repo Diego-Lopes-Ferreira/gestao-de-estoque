@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import callBackend from '../../utils/callbackend';
-import Link from 'next/link';
 import Header from '../../components/header';
 
-export default function HomePage() {
+export default function EditProduct() {
   const router = useRouter();
   const { id } = router.query;
 
