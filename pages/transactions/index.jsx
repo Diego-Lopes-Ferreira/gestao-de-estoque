@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import callBackend from '../../utils/callbackend';
 import Header from '../../components/header';
 import Transaction from '../../components/transaction';
+import Link from 'next/link';
 
 export default function TransactionsList() {
   const [transactions, set_transactions] = useState([]);
@@ -17,6 +18,7 @@ export default function TransactionsList() {
   return (
     <div className="screen-div">
       <Header title='Pessoas' />
+      <Link href='/transactions/new'>Adicionar Nova Transação</Link>
       <section>
         {
           transactions.map(t => {

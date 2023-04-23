@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import callBackend from '../../utils/callbackend';
 import Header from '../../components/header';
 import Product from '../../components/product';
+import Link from 'next/link';
 
 export default function ProductsList() {
   const [products, set_products] = useState([]);
@@ -17,6 +18,7 @@ export default function ProductsList() {
   return (
     <div className="screen-div">
       <Header title='Produtos' />
+      <Link href='/products/new'>Adicionar Novo Produto</Link>
       <section>
         {
           products.map(p => {

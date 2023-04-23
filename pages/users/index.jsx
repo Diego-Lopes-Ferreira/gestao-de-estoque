@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import callBackend from '../../utils/callbackend';
 import Header from '../../components/header';
 import User from '../../components/user';
+import Link from 'next/link';
 
 export default function UsersList() {
   const [users, set_users] = useState([]);
@@ -17,6 +18,7 @@ export default function UsersList() {
   return (
     <div className="screen-div">
       <Header title='Pessoas' />
+      <Link href='/products/new'>Adicionar Novo Usuário</Link>
       <section>
         {
           users.map(u => {
