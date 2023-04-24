@@ -28,6 +28,7 @@ export default function HomePage() {
       <Link href="/users" >Gerenciar Pessoas</Link>
       <Link href="/products" >Gerenciar Produtos</Link>
       <Link href="/transactions" >Gerenciar Transacoes</Link>
+      <Link href="/alerts" >Gerenciar Alertas</Link>
       {/* TODO: Tarefa 4.05 */ }
       <section>
         {
