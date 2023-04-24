@@ -6,6 +6,7 @@
   --medium: 0.5rem;
   --large: 1rem;
   --color-primary: #8dee0e;
+  --color-red: #ff0000;
 }
 
 * {
@@ -14,6 +15,8 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: var(--font-normal);
+  outline: none;
+  border: none;
 }
 
 a {
@@ -45,6 +48,8 @@ header a {
 
 input,
 label,
+textarea,
+select,
 button {
   display: block;
   font-family: inherit;
@@ -52,16 +57,28 @@ button {
   width: 100%;
 }
 
-input {
+input, textarea, select {
   border-radius: var(--small);
   padding: var(--small);
+  border: 1px solid black;
+}
+
+textarea {
+  resize: vertical;
 }
 
 button {
   background-color: var(--color-primary);
   padding: var(--small) var(--large);
+  border-radius: var(--small);
   text-align: center;
   cursor: pointer;
+  display: inline;
+  width: fit-content;
+}
+
+button.delete {
+  background-color: var(--color-red);
 }
 
 .item {
