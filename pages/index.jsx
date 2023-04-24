@@ -36,7 +36,7 @@ export default function HomePage() {
           products.map(product => {
             return <Link key={product.id} href={`/products/${product.id}`}>
               <div className="item">
-                <p>{product.name}: {product.quantity}</p>
+                <p>{product.name}: <strong>{product.quantity}</strong></p>
               </div>
             </Link>
           })

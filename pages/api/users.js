@@ -32,7 +32,7 @@ async function read(id) {
 async function reads() {
   let sqlResult = {};
   try {
-    sqlResult = await prisma.user.findMany();
+    sqlResult = await prisma.user.findMany({ orderBy: [{ sector: 'asc' }, { name: 'asc' }] });
   } catch (err) { console.warn(err); }
 
   if (sqlResult == {}) return [500, { message: "" }];

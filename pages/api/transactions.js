@@ -30,7 +30,7 @@ async function read(id) {
 async function reads() {
   let sqlResult = {};
   try {
-    sqlResult = await prisma.transaction.findMany();
+    sqlResult = await prisma.transaction.findMany({ orderBy: [{ date: 'desc' }] });
   } catch (err) {
     console.warn(err);
     return [500, { message: "Reads transactions" }];

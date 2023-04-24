@@ -30,7 +30,7 @@ async function read(id) {
 async function reads() {
   let sqlResult = {};
   try {
-    sqlResult = await prisma.product.findMany();
+    sqlResult = await prisma.product.findMany({ orderBy: [{ name: 'asc' }] });
   } catch (err) {
     console.warn(err);
     return [500, { message: "Reads products" }];
