@@ -23,6 +23,7 @@ function Task({ task }) {
         <p>{ task.description }</p>
         <p>{ user_name }</p>
         <p>{ new Date(task.date).toISOString().slice(0, 10) } { '->' } { new Date(task.due_date).toISOString().slice(0, 10) }</p>
+        { task.complete_date == null ? '' : <p>Completa em: { new Date(task.complete_date).toISOString().slice(0, 10) }</p> }
       </div>
     </Link>
   );
