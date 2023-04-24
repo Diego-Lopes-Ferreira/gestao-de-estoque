@@ -36,7 +36,7 @@ export default function EditUser() {
 
   return (
     <div className="screen-div">
-      <Header title='Gerenciar Pessoas' links={ [{ text: 'Pessoas', url: '/users' }] } />
+      <Header title='Gerenciar Pessoas' current='Editar' links={ [{ text: 'Pessoas', url: '/users' }] } />
       <label>Nome:</label>
       <input value={ name } onChange={ (e) => { set_name(e.target.value); } } />
       <label>Setor:</label>
