@@ -17,7 +17,7 @@ export default function TransactionsList() {
 
   return (
     <div className="screen-div">
-      <Header title='Pessoas' />
+      <Header title='Transações' current='Transações' />
       <Link href='/transactions/new'>Adicionar Nova Transação</Link>
       <section>
         {

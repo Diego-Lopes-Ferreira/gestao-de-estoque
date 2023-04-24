@@ -17,8 +17,8 @@ export default function UsersList() {
 
   return (
     <div className="screen-div">
-      <Header title='Pessoas' />
-      <Link href='/products/new'>Adicionar Novo Usuário</Link>
+      <Header title='Pessoas' current={'Pessoas'} />
+      <Link href='/users/new'>Adicionar Novo Usuário</Link>
       <section>
         {
           users.map(u => {

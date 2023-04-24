@@ -57,7 +57,7 @@ export default function EditTransaction() {
 
   return (
     <div className="screen-div">
-      <Header title='Gerenciar Transações' />
+      <Header title='Gerenciar Transações' current='Editar' links={ [{ text: 'Transações', url: '/transactions' }] } />
       <label>Data:</label>
       <input value={ date } type="date" onChange={ (e) => { set_date(e.target.value); } } />
       <label>Quantidade:</label>

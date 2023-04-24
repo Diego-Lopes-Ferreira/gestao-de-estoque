@@ -37,7 +37,7 @@ export default function AlertsList() {
 
   return (
     <div className="screen-div">
-      <Header title='Pessoas' />
+      <Header title='Alertas' current='Alertas' />
       <Link href='/alerts/new'>Adicionar Novo Alerta</Link>
       <section>
         {

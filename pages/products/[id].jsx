@@ -40,7 +40,7 @@ export default function EditProduct() {
 
   return (
     <div className="screen-div">
-      <Header title='Gerenciar Produtos' />
+      <Header title='Gerenciar Produtos' current='Editar' links={ [{ text: 'Produtos', url: '/products' }] } />
       <label>Nome:</label>
       <input value={ name } onChange={ (e) => { set_name(e.target.value); } } />
       <label>Descrição:</label>

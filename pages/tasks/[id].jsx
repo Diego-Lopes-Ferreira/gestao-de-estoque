@@ -65,7 +65,7 @@ export default function EditTask() {
 
   return (
     <div className="screen-div">
-      <Header title='Gerenciar Tarefa' />
+      <Header title='Gerenciar Tarefa' current='Editar' links={ [{ text: 'Tarefas', url: '/tasks' }] } />
       {/* DATAS */ }
       <label>Data de início:</label>
       <input value={ date } type="date" onChange={ (e) => { set_date(e.target.value); } } />

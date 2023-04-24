@@ -17,7 +17,7 @@ export default function ProductsList() {
 
   return (
     <div className="screen-div">
-      <Header title='Produtos' />
+      <Header title='Produtos' current='Produtos' />
       <Link href='/products/new'>Adicionar Novo Produto</Link>
       <section>
         {

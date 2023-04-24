@@ -42,7 +42,7 @@ export default function TasksList() {
 
   return (
     <div className="screen-div">
-      <Header title='Tarefas' />
+      <Header title='Tarefas' current='Tarefas' />
       <Link href='/tasks/new'>Adicionar Nova Tarefa</Link>
       <section className='two-column'>
         <section>

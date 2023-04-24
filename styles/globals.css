@@ -21,6 +21,7 @@
 
 a {
   color: inherit;
+  text-decoration: underline;
 }
 
 main,
@@ -39,10 +40,9 @@ header {
   font-family: var(--font-highlight);
 }
 
-header a {
+header a, header p {
   font-size: 0.75rem;
-  border: 1px solid black;
-  padding: var(--small) var(--large);
+  padding: var(--small);
   font-family: var(--font-monospace);
 }
 

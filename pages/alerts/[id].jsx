@@ -52,7 +52,7 @@ export default function EditAlert() {
 
   return (
     <div className="screen-div">
-      <Header title='Gerenciar Alerta' />
+      <Header title='Gerenciar Alerta' current='Editar' links={ [{ text: 'Alertas', url: '/alerts' }] } />
       <label>Título:</label>
       <input value={ title } onChange={ (e) => { set_title(e.target.value); } } />
       <label>Quantidade:</label>
