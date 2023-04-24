@@ -44,12 +44,23 @@ export default function TasksList() {
     <div className="screen-div">
       <Header title='Tarefas' />
       <Link href='/tasks/new'>Adicionar Nova Tarefa</Link>
-      <section>
-        {
-          tasks.map(t => {
-            return <Task key={ t.id } task={ t } />;
-          })
-        }
+      <section className='two-column'>
+        <section>
+          <h2>A fazer:</h2>
+          {
+            tasks.map(t => {
+              if (t.complete_date == null) return <Task key={ t.id } task={ t } />;
+            })
+          }
+        </section>
+        <section>
+          <h2>Concluídas:</h2>
+          {
+            tasks.map(t => {
+              if (t.complete_date != null) return <Task key={ t.id } task={ t } />;
+            })
+          }
+        </section>
       </section>
     </div>
   );
