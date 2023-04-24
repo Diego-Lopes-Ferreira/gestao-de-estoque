@@ -3,7 +3,7 @@
   --font-highlight: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-monospace: monospace;
   --small: 0.25rem;
-  --medium: 0.5rem;
+  --medium: 0.75rem;
   --large: 1rem;
   --color-primary: #8dee0e;
   --color-red: #ff0000;
@@ -15,8 +15,28 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: var(--font-normal);
-  outline: none;
+  /* outline: 3px solid #00ff0022; */
   border: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -32,6 +52,7 @@ main,
   align-items: center;
   padding: var(--large);
   gap: var(--medium);
+  width: 100%;
   max-width: 50rem;
 }
 
@@ -40,7 +61,8 @@ header {
   font-family: var(--font-highlight);
 }
 
-header a, header p {
+header a,
+header p {
   font-size: 0.75rem;
   padding: var(--small);
   font-family: var(--font-monospace);
@@ -57,7 +79,9 @@ button {
   width: 100%;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   border-radius: var(--small);
   padding: var(--small);
   border: 1px solid black;
@@ -81,15 +105,6 @@ button.delete {
   background-color: var(--color-red);
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border: 2px solid black;
-  padding: 1rem;
-  margin: 0.5rem 0;
-}
-
 .bar {
   border-top: 1px solid black;
   width: 100%;
@@ -100,4 +115,50 @@ button.delete {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 1rem;
+}
+
+section:has(.item) {
+  /* background-color: #ff0000; */
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: var(--small);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.item.user p:nth-child(2),
+.item.product p:nth-child(2),
+.item.alert p:nth-child(2),
+.item.transaction p:nth-child(3) {
+  font-size: var(--medium);
+  font-style: italic;
+}
+
+.item.transaction p:nth-child(2) {
+  font-weight: bold;
+}
+
+.item.task p:nth-child(1) {
+  font-weight: bold;
+}
+
+.item.task p:nth-child(2) {
+  font-style: italic;
+  font-size: var(--medium);
+}
+
+.item.task p:nth-child(3),
+.item.task p:nth-child(4),
+.item.task p:nth-child(5) {
+  font-size: var(--medium);
+}
+.item.task p:nth-child(5) {
+  font-weight: bold;
 }
