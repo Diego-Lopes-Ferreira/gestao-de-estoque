@@ -38,7 +38,7 @@ model Task {
   id            String   @id @default(uuid())
   date          DateTime
   due_date      DateTime
-  complete_date DateTime
+  complete_date DateTime?
   title         String
   description   String
   user          User     @relation("CreateTask", fields: [userId], references: [id])
