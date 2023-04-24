@@ -34,7 +34,7 @@ export default function HomePage() {
       <section>
         {
           products.map(product => {
-            return <Link href={`/products/${product.id}`}>
+            return <Link key={product.id} href={`/products/${product.id}`}>
               <div className="item">
                 <p>{product.name}: {product.quantity}</p>
               </div>
