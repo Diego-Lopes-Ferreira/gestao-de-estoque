@@ -36,7 +36,8 @@ body {
 .wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 a {
@@ -53,7 +54,13 @@ main,
   padding: var(--large);
   gap: var(--medium);
   width: 100%;
-  max-width: 50rem;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20% 80%;
+  min-height: 100vh;
 }
 
 header {
@@ -105,6 +112,10 @@ button.delete {
   background-color: var(--color-red);
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 .bar {
   border-top: 1px solid black;
   width: 100%;
@@ -115,6 +126,10 @@ button.delete {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 1rem;
+}
+
+section {
+  height: 100%;
 }
 
 section:has(.item) {
@@ -159,6 +174,37 @@ section:has(.item) {
 .item.task p:nth-child(5) {
   font-size: var(--medium);
 }
+
 .item.task p:nth-child(5) {
   font-weight: bold;
+}
+
+.explanation {
+  font-size: 0.75rem;
+  font-style: italic;
+  font-family: var(--font-highlight);
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid black;
+  padding: var(--small);
+}
+
+nav a {
+  display: block;
+  width: fit-content;
+  padding: var(--small) 0;
+  cursor: pointer;
+}
+
+nav h1 {
+  border-bottom: 1px solid black;
+  font-size: 2rem;
+}
+nav h2 {
+  font-size: 1.2rem;
+  margin-top: var(--medium);
+  border-bottom: 1px dashed black;
 }
