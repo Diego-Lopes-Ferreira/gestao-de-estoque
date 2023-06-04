@@ -17,7 +17,7 @@ export default function UsersList() {
 
   return (
     <div className="screen-div">
-      <Header title='Pessoas' current={'Pessoas'} />
+      <Header title='Usuários' current={'Usuários'} />
       <Link href='/users/new'>Adicionar Novo Usuário</Link>
       <section>
         {
